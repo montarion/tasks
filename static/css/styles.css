@@ -1,0 +1,153 @@
+/*colour pallette: https://coolors.co/1fa541-002500-edcbb1-69747c-6b6054 */
+:root{
+    --background: #edcbb1;
+    --primary: #1FA541;
+    --secondary: #002500;
+    --text-color: #636363;
+    font-size: 20px;
+    margin: 0px;
+}
+html[data-theme='light'] {
+    --background: #D9D9D9;
+    --accent: #064141;
+    --text-color: #636363;
+
+
+  }
+  
+html[data-theme='dark'] {
+    --background: #064141;
+    --accent: #636363;
+    --text-color: #D9D9D9;
+
+    
+}
+
+.main{
+    width: 100vw;
+    height: 100vh;
+}
+.container{
+    width: 50%;
+    margin: 0 auto;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+.textinput{
+    border:none;
+    outline:none;
+}
+.textinput{
+    border:none;
+    outline:none;
+}
+.filters{}
+.tasks{
+}
+
+.task{
+    display:flex;
+    justify-content: flex-end;
+}
+
+.title{
+    display: inline-block;
+    font-size: 1rem;
+    font-weight: bold;
+    margin-left: 1rem;
+    overflow-wrap: anywhere;
+}
+
+.description{
+    flex:1;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.title::after{
+    content: " | ";
+}
+.date{}
+.tags{}
+
+[placeholder]:empty::before {
+    content: attr(placeholder);
+    color: #555; 
+}
+
+[placeholder]:empty:focus::before {
+    content: "";
+}
+
+.tagpicker{
+    position: absolute;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    display:flex;
+    flex-direction: column;
+    width: min-content;
+
+}
+.tagpicker-tag{
+}
+
+.taglistelement{
+    display: inline-block;
+}
+
+.tag{
+    
+}
+
+.addtaskbutton{
+    display: flex;
+    justify-content: center;
+    position: relative;
+    width: fit-content;
+    margin: 0 auto;
+    top: 80px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    padding: 10px;
+}
+
+
+.title:empty, .description:empty{
+    color: grey;
+}
+.title:empty::before{
+    content: "Title.."
+}
+
+.description:empty::before{
+    content: "Description.."
+}
+.taskheader{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    width: 90%;
+    margin: 0 auto;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    padding: 10px;
+    
+}
+
+.taskheadertitle{
+    display: flex;
+  justify-content: center;
+  position: relative;
+  width: fit-content;
+  margin: 0 auto;
+  font-size: 1.3rem;
+  font-weight: bold;
+  padding: 10px;
+}
+
+.taskheader:has(.taskheadercontent:empty){
+    display: none;
+}
+
+.tagswitch[data-active=true]{
+    filter: brightness(90%);
+
+}
